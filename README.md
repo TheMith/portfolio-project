@@ -2,5 +2,5 @@
 
 This project is a portfolio about me.
 
--- npm i react-router-dom
--- npm i semantic-ui-css
+- npm install react-router-dom
+- npm install semantic-ui-css
