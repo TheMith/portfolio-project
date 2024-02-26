@@ -1,9 +1,27 @@
 .app {
-    padding: 24px;
-    background-color: #f0f0f0;
-    height: 100vh;
+	padding: 24px;
+	height: 100vh;
+	background-color: var(--color-background);
+	color: var(--color-foreground);
 }
 
 header {
-    background-color: azure;
+	background-color: azure;
+}
+
+body {
+  --color-background: #fafafa;
+  --color-foreground: #1f2023;
+}
+
+body.dark {
+  --color-background: #1f2023;
+  --color-foreground: #efefef;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #1f2023;
+		color: #dadada;
+	}
 }
