@@ -5,11 +5,11 @@ import { About } from './components/About/About';
 import { Skills } from './components/Skills/Skills';
 import { ErrorPage } from './pages/ErrorPage';
 
-const base = '/portfolio-project'; // Remove the trailing slash
+const base = '/portfolio-project';
 
 export const router = createBrowserRouter([
 	{
-		path: base,
+		path: '/',
 		element: <App />,
 		children: [
 			{ index: true, element: <Home /> },
