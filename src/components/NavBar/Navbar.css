@@ -27,8 +27,8 @@
 .desktopMenu {
     display: flex;
     justify-content: center;
+    flex-grow: 1;
 }
-
 
 .desktopMenuListItem:hover {
     color: yellow;
