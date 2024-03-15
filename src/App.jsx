@@ -6,22 +6,22 @@ import './index.css';
 
 function App() {
 
-    const current_theme = localStorage.getItem('current-theme');
-    const [theme, setTheme] = useState(current_theme ? current_theme : 'light');
+	const current_theme = localStorage.getItem('current-theme');
+	const [theme, setTheme] = useState(current_theme ? current_theme : 'light');
 
-    useEffect(() => {
-        localStorage.setItem('current-theme', theme);
-        document.documentElement.className = theme;
-    }, [theme]);
+	useEffect(() => {
+		localStorage.setItem('current-theme', theme);
+		document.documentElement.className = theme;
+	}, [theme]);
 
-    return (
-        <div>
-            <Navbar theme={theme} setTheme={setTheme} />
-            <div className='ui container'>
-                <Outlet />
-            </div>
-        </div>
-    );
+	return (
+		<div>
+			<Navbar theme={theme} setTheme={setTheme} />
+			<div className='ui container'>
+				<Outlet />
+			</div>
+		</div>
+	);
 }
 
 export default App;

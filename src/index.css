@@ -32,7 +32,6 @@
   transition: 0.5s;
 }
 
-/* Navbar Styles */
 
 .navbar {
   height: 5rem;
@@ -52,7 +51,6 @@
   height: 2rem;
   object-fit: cover;
 }
-
 
 .logo {
     object-fit: cover;
@@ -93,8 +91,6 @@ a i {
     font-weight: 600;
 }
 
-/* Home Styles */
-
 #home {
     height: calc(100vh - 4rem);
     text-align: center;
@@ -132,8 +128,6 @@ a i {
     background-color: #ff9d00;
     font-size: 25px;
 }
-
-/* About Styles */
 
 #about {
     max-width: 80rem;
@@ -178,8 +172,6 @@ a i {
 .bg {
     width: 25%;
 }
-
-/* Skills Styles */
 
 #skills {
     text-align: center;
@@ -240,8 +232,6 @@ a i {
 .text-button.clicked {
     transform: scale(1.1);
 }
-
-/* Contact Styles */
 
 .contact {
     padding-top: 390px;
