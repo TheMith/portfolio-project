@@ -18,24 +18,26 @@
     ]
   },
   "home": {
-    "greeting": "Hello,",
+    "greeting": "Hello",
     "name": "Estevam Filho",
-    "profession": "Web Developer"
+    "profession": "Web Developer",
+    "button": "Know more about me"
   },
   "skills": {
-    "categories": [
-      {
-        "title": "Front-End",
-        "skills": ["HTML", "CSS", "JavaScript", "React"]
-      },
-      {
-        "title": "Back-End",
-        "skills": ["Node.js", "Java", "C++", "MySQL"]
-      },
-      {
-        "title": "Tools",
-        "skills": ["Git", "GitHub", "VSCode"]
-      }
-    ]
+    "frontEnd": {
+      "expanded": false,
+      "buttonClicked": "",
+      "list": ["HTML", "CSS", "JavaScript", "React"]
+    },
+    "backEnd": {
+      "expanded": false,
+      "buttonClicked": "",
+      "list": ["Node.js", "Java", "C++", "MySQL"]
+    },
+    "tools": {
+      "expanded": false,
+      "buttonClicked": "",
+      "list": ["Git", "GitHub", "VSCode"]
+    }
   }
 }

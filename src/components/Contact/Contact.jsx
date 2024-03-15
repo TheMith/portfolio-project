@@ -1,7 +1,16 @@
+import { useJsonData } from '../../services/hook.js';
+
 export function Contact() {
+
+    const jsonData = useJsonData();
+
+    if (!jsonData) {
+        return <div>Loading...</div>;
+    }
+
     return (
-        <section id='contact' class="contact">
-            <h2 className='contactTitle'>Contact Me</h2>
+        <section id='contact' className="contact">
+            <h2 className='contactTitle'>{jsonData.contact.title}</h2>
             <div className="socialIcons">
                 <a href="https://www.linkedin.com/in/estevamfilho227/" target="_blank">
                     <i className="fa-brands fa-linkedin"></i>
@@ -11,6 +20,5 @@ export function Contact() {
                 </a>
             </div>
         </section>
-
     );
 }

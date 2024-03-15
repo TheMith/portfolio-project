@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useJsonData } from '../../services/hook.js';
 
 export function Skills() {
     const [isFrontEndExpanded, setFrontEndExpanded] = useState(false);
@@ -33,6 +34,12 @@ export function Skills() {
         }, 300);
     };
 
+    const jsonData = useJsonData();
+
+    if (!jsonData) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <section id='skills' className='skills'>
             <div className='skill-category'>
@@ -42,10 +49,9 @@ export function Skills() {
                     </button>
                 </h2>
                 <ul className={`skill-list ${isFrontEndExpanded ? 'visible' : ''}`}>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
+                    {jsonData.skills.frontEnd.list.map((skill, index) => (
+                        <li key={index}>{skill}</li>
+                    ))}
                 </ul>
             </div>
             <div className='skill-category'>
@@ -55,10 +61,9 @@ export function Skills() {
                     </button>
                 </h2>
                 <ul className={`skill-list ${isBackEndExpanded ? 'visible' : ''}`}>
-                    <li>Node.js</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>MySQL</li>
+                    {jsonData.skills.backEnd.list.map((skill, index) => (
+                        <li key={index}>{skill}</li>
+                    ))}
                 </ul>
             </div>
             <div className='skill-category'>
@@ -68,9 +73,9 @@ export function Skills() {
                     </button>
                 </h2>
                 <ul className={`skill-list ${isToolsExpanded ? 'visible' : ''}`}>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>VSCode</li>
+                    {jsonData.skills.tools.list.map((skill, index) => (
+                        <li key={index}>{skill}</li>
+                    ))}
                 </ul>
             </div>
         </section>
