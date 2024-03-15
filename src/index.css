@@ -5,6 +5,9 @@
   --text-color: #181717;
   --button-background: #181717;
   --button-text: white;
+  --nav-color: orange;
+  --homeName-color: orange;
+  --homeButton-color: #181717;
 }
 
 :root.dark {
@@ -12,6 +15,9 @@
   --text-color: white;
   --button-background: white;
   --button-text: #181717;
+  --nav-color: yellow;
+  --homeName-color: yellow;
+  --homeButton-color: #181717;
 }
 
 * {
@@ -42,6 +48,11 @@
   color: var(--text-color);
 }
 
+.navbar img{
+  height: 2rem;
+  object-fit: cover;
+}
+
 
 .logo {
     object-fit: cover;
@@ -50,7 +61,7 @@
 }
 
 .desktopMenuListItem {
-    margin-right: 70px;
+    margin-right: 130px;
     cursor: pointer;
     font-size: 20px;
 }
@@ -58,13 +69,14 @@
 .desktopMenu {
     display: flex;
     justify-content: center;
+	font-weight: 600;
     flex-grow: 1;
 }
 
 .desktopMenuListItem:hover {
-    color: yellow;
+    color: var(--nav-color);
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid yellow;
+    border-bottom: 1px solid var(--nav-color);
     transition: 0.5s;
 }
 
@@ -101,15 +113,15 @@ a i {
 
 .homeName {
     font-weight: 600;
-    color: yellow;
+    color: var(--homeName-color);
 }
 
 .homeButton {
     margin-top: 20px;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #ebb907;
-    color: white;
+    background-color: var(--homeName-color);
+    color: var(--homeButton-color);
     font-size: 20px;
     cursor: pointer;
     transition: 0.5s;
@@ -119,7 +131,6 @@ a i {
 .homeButton:hover {
     background-color: #ff9d00;
     font-size: 25px;
-    color: black;
 }
 
 /* About Styles */
@@ -139,9 +150,10 @@ a i {
 
 .aboutInfo {
     flex: 1;
-    padding-right: 10rem;
+    padding-right: 1rem;
     flex-direction: column;
     justify-content: center;
+	align-items: center;
 }
 
 .aboutTitle {
@@ -157,7 +169,7 @@ a i {
     padding-right: 20px;
     font-size: 1.25rem;
     max-width: 70rem;
-    font-weight: 250;
+    font-weight: 500;
     padding: 0 2rem;
     margin-bottom: 1.5rem;
     text-align: left;
@@ -232,7 +244,7 @@ a i {
 /* Contact Styles */
 
 .contact {
-    padding-top: 300px;
+    padding-top: 390px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,4 +269,109 @@ a i {
 
 .socialIcons a {
     transition: 0.5s;
+}
+
+@media only screen and (max-width: 1440px) {
+  .navbar {
+    margin-right: 0;
+  }
+
+  .desktopMenuListItem {
+    margin-right: 30px;
+    font-size: 16px;
+  }
+
+  .icons a {
+    margin-right: 30px;
+  }
+
+  .homeContent {
+    font-size: 40px;
+  }
+
+  .aboutTitle {
+    font-size: 2rem;
+  }
+
+  .aboutDesc {
+    font-size: 1rem;
+  }
+
+  .skills {
+    padding-top: 150px;
+  }
+
+  .skill-category {
+    margin-right: 50px;
+  }
+
+  .contact {
+    padding-top: 150px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .desktopMenuListItem {
+    display: always;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .homeContent {
+    font-size: 30px;
+  }
+
+  .aboutSection {
+    flex-direction: column;
+  }
+
+  .aboutTitle {
+    font-size: 2rem;
+  }
+
+  .aboutDesc {
+    font-size: 1rem;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-category {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .contact {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .homeContent {
+    font-size: 24px;
+  }
+
+  .aboutTitle {
+    font-size: 1.5rem;
+  }
+
+  .aboutDesc {
+    font-size: 0.9rem;
+  }
+
+  .contactTitle {
+    font-size: 1.8rem;
+  }
 }

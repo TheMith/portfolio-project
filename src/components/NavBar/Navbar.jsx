@@ -14,7 +14,7 @@ export default function Navbar({ theme, setTheme }) {
 		<nav className='navbar'>
 			<Link className='name' to='/'>Estevam Filho</Link>
 			<div className="desktopMenu">
-				<Link className='desktopMenuListItem' to='/about'>About Me</Link>
+				<Link className='desktopMenuListItem ' to='/about'>About Me</Link>
 				<Link className='desktopMenuListItem' to='/skills'>My Skills</Link>
 				<Link className='desktopMenuListItem' to='/contact'>Contact Me</Link>
 			</div>
