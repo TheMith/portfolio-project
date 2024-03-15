@@ -7,8 +7,8 @@ export default function Navbar() {
 		<nav className='navbar'>
 			<Link className='name' to='/'>Estevam Filho</Link>
 			<div className="desktopMenu">
-				<Link className='desktopMenuListItem' to='/about'>About Me</Link>
-				<Link className='desktopMenuListItem' to='/skills'>My Skills</Link>
+				<Link className='desktopMenuListItem' to='/portfolio-project/about'>About Me</Link>
+				<Link className='desktopMenuListItem' to='/portfolio-project/skills'>My Skills</Link>
 			</div>
 			<div className='icons'>
 				<a href=""><i className="fab fa-linkedin"></i></a>
