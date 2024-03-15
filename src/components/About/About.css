@@ -1,0 +1,42 @@
+#about{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.aboutSection{
+    height: calc(40vw - 4rem);
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.aboutInfo {
+  flex: 1;
+  padding-right: 10rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutTitle{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-left: 33px;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.aboutDesc{
+    padding-right: 20px;
+    font-size: 1.25rem;
+    max-width: 70rem;
+    font-weight: 250;
+    padding: 0 2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.bg{
+    width: 25%;
+}
