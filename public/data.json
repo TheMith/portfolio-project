@@ -1,0 +1,41 @@
+{
+  "about": {
+    "title": "Who Am I",
+    "description": "I'm Estevam Filho, a 19-year-old college student who discovered my passion for programming when I started college. I spend my time watching series and video-gaming, right now i am aiming to become a Web Developer.",
+    "image": "../../assets/eu.jpg"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "socialIcons": [
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/estevamfilho227/"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/TheMith"
+      }
+    ]
+  },
+  "home": {
+    "greeting": "Hello,",
+    "name": "Estevam Filho",
+    "profession": "Web Developer"
+  },
+  "skills": {
+    "categories": [
+      {
+        "title": "Front-End",
+        "skills": ["HTML", "CSS", "JavaScript", "React"]
+      },
+      {
+        "title": "Back-End",
+        "skills": ["Node.js", "Java", "C++", "MySQL"]
+      },
+      {
+        "title": "Tools",
+        "skills": ["Git", "GitHub", "VSCode"]
+      }
+    ]
+  }
+}

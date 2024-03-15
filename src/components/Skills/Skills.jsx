@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Skills.css';
 
 export function Skills() {
     const [isFrontEndExpanded, setFrontEndExpanded] = useState(false);

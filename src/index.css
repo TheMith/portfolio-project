@@ -1,11 +1,260 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-decoration: none;
-	background: transparent;
-	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
-	color: white;
-	background: #181717;
+/* General Styles */
+
+:root.light {
+  --background-color: white;
+  --text-color: #181717;
+  --button-background: #181717;
+  --button-text: white;
+}
+
+:root.dark {
+  --background-color: #181717;
+  --text-color: white;
+  --button-background: white;
+  --button-text: #181717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  transition: 0.5s;
+}
+
+/* Navbar Styles */
+
+.navbar {
+  height: 5rem;
+  width: 100%;
+  margin-right: 50px;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  color: var(--text-color);
+}
+
+
+.logo {
+    object-fit: cover;
+    height: 3rem;
+    width: 4rem;
+}
+
+.desktopMenuListItem {
+    margin-right: 70px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.desktopMenu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.desktopMenuListItem:hover {
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid yellow;
+    transition: 0.5s;
+}
+
+a i {
+    font-size: 24px;
+}
+
+.icons a {
+    margin-right: 60px;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Home Styles */
+
+#home {
+    height: calc(100vh - 4rem);
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.homeContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.homeName {
+    font-weight: 600;
+    color: yellow;
+}
+
+.homeButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ebb907;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.homeButton:hover {
+    background-color: #ff9d00;
+    font-size: 25px;
+    color: black;
+}
+
+/* About Styles */
+
+#about {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.aboutSection {
+    height: calc(40vw - 4rem);
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.aboutInfo {
+    flex: 1;
+    padding-right: 10rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-left: 33px;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.aboutDesc {
+    padding-right: 20px;
+    font-size: 1.25rem;
+    max-width: 70rem;
+    font-weight: 250;
+    padding: 0 2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.bg {
+    width: 25%;
+}
+
+/* Skills Styles */
+
+#skills {
+    text-align: center;
+    font-size: 30px;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    padding-top: 350px;
+}
+
+.skill-category {
+    margin-right: 100px;
+    text-align: center;
+}
+
+.category-title {
+    font-size: 1.5em;
+}
+
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.5s;
+}
+
+.skill-list.visible {
+    max-height: 1000px;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.skill-list li {
+    margin: 5px 0;
+}
+
+.text-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+    transition: transform 0.3s ease;
+}
+
+.text-button.clicked {
+    transform: scale(1.1);
+}
+
+/* Contact Styles */
+
+.contact {
+    padding-top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+	color: var(--text-color);
+}
+
+.socialIcons {
+    display: flex;
+}
+
+.socialIcons i {
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+.socialIcons a {
+    transition: 0.5s;
 }
